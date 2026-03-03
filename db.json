@@ -24,18 +24,6 @@
       ]
     },
     {
-      "id": "241eea0d-62e4-48d7-b23e-4777fbdebd21",
-      "name": "Place",
-      "surname": "Holder",
-      "username": "placeholder",
-      "email": "placeholder@gmail.com",
-      "password": "Temporary@2",
-      "role": [
-        "user",
-        "editor"
-      ]
-    },
-    {
       "id": "9acde46e-45f7-40ea-8131-5c8045c316e1",
       "name": "Alpha",
       "surname": "Beta",
