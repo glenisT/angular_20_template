@@ -1,0 +1,443 @@
+{
+  "MENU": {
+    "DASHBOARD": {
+      "TITLE": "Dashboard"
+    },
+    "HOME": {
+      "TITLE": "Home",
+      "WELCOME": "Bentornato",
+      "INFO": "Ecco una panoramica sulla prevenzione dell'abbandono."
+    },
+    "ADMINISTRATION": {
+      "ADMIN": "Amministrazione",
+      "USERS": "Utenti",
+      "ROLES": "Ruoli",
+      "PROFILES": "Profili",
+      "SETTINGS": "Impostazioni",
+      "LIBRARIES": "Librerie"
+    },
+    "ADMIN_SETTINGS": {
+      "TITLE": "Configurazioni"
+    },
+    "THEME": {
+      "THEME": "Guida Tema",
+      "COLORS": "Colori",
+      "BUTTONS": "Pulsanti",
+      "TABLES": "Tabelle",
+      "DATETIME": "Data / Ora"
+    }
+  },
+  "VALIDATION": {
+    "REQUIRED": "è obbligatorio",
+    "USERNAME_INVALID": "Inserire un username valido",
+    "PATTERN_INVALID": "Il formato inserito non è valido",
+    "DATE_INVALID": "Data non valida",
+    "TIME_INVALID": "Orario non valido",
+    "SELECT_REQUIRED": "Selezionare almeno un'opzione",
+    "PASSWORD_INVALID": "Minimo 8 caratteri. Deve contenere numeri, lettere e un carattere speciale."
+  },
+  "TOOLBAR": {
+    "LANG": {
+      "ITA": "Italiano",
+      "ENG": "Inglese"
+    },
+    "PROFILE": "Profilo",
+    "LOGOUT": "Esci"
+  },
+  "DIALOG": {
+    "LOGOUT_TITLE": "Sei sicuro di voler uscire?",
+    "YES": "Sì",
+    "NO": "No"
+  },
+  "UNAUTHORIZED": {
+    "TITLE": "Non autorizzato",
+    "SUBTITLE": "Non disponi le autorizzazioni per visualizzare questa pagina!",
+    "SORRY": "Scusa"
+  },
+  "PAGINATOR": {
+    "PAGE_SIZE_LABEL": "Elementi per pagina:"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "BIGGEST_MOVERS": "Movimenti più rilevanti",
+    "LAST_UPDATED": "Ultimo aggiornamento",
+    "AGO": "fa",
+    "CARDS": {
+      "VS_LAST_MONTH": "rispetto al mese scorso",
+      "FIRST_CARD_TITLE": "Account da revisionare oggi",
+      "SECOND_CARD_TITLE": "Rischio più elevato per MPR",
+      "THIRD_CARD_TITLE": "Rinnovi a rischio (30g)",
+      "FOURTH_CARD_TITLE": "Abbandono previsto",
+      "ACCOUNTS_TO_REVIEW": "Account da revisionare",
+      "PORTOFOLIO_OVERVIEW": "Panoramica del portafoglio",
+      "REVIEW": "Revisiona",
+      "USAGE_DROP": "Calo di utilizzo",
+      "PAYMENT_FAILED": "Pagamento non riuscito"
+    },
+    "CHIPS": {
+      "HIGH": "Alto",
+      "AT_RISK": "A rischio",
+      "LOGIN_FREQUENCY": "Frequenza di accesso",
+      "FEATURE_ADOPTION": "Adozione delle funzionalità"
+    },
+    "BUTTONS": {
+      "VIEW_ACCOUNT": "Visualizza account",
+      "START_PLAYBOOK": "Avvia playbook",
+      "VIEW_ALL": "Visualizza tutto",
+      "ACKNOWLEDGE": "Conferma",
+      "SNOOZE": "Posticipa"
+    }
+  },
+  "USERS": {
+    "TITLE": "Utenti",
+    "SEARCH_PLACEHOLDER": "Cerca per nome",
+    "REFRESH": "Ricarica",
+    "CREATE_BUTTON": "Nuovo",
+    "TABLE": {
+      "FIRSTNAME": "Nome",
+      "LASTNAME": "Cognome",
+      "USERNAME": "Username",
+      "ROLES": "Ruoli",
+      "ACTIONS": "Azioni",
+      "NO_USER": "Nessun utente"
+    },
+    "DIALOG": {
+      "TOGGLE": {
+        "TITLE_ENABLED": "Abilita utente",
+        "TITLE_DISABLE": "Disabilita utente",
+        "MESSAGE_ENABLED": "Sei sicuro di voler abilitare l'utente {{ value }}?",
+        "MESSAGE_DISABLE": "Sei sicudo di voler disabilitare l'utente {{ value }}?",
+        "BUTTONS": {
+          "CANCEL": "Annulla",
+          "ENABLED": "Abilita",
+          "DISABLE": "Disabilita"
+        }
+      }
+    },
+    "UPSERT": {
+      "CREATE_USER": "Crea utente",
+      "EDIT_USER": "Modifica utente",
+      "FIRSTNAME_PLACEHOLDER": "Nome",
+      "LASTNAME_PLACEHOLDER": "Cognome",
+      "USERNAME_PLACEHOLDER": "Username",
+      "PASSWORD_PLACEHOLDER": "Password",
+      "ROLES_PLACEHOLDER": "Ruoli",
+      "ENABLED_PLACEHOLDER": "Abilitato",
+      "PROFILE_PLACEHOLDER": "Profilo",
+      "BUTTONS": {
+        "CANCEL": "Annulla",
+        "SAVE": "Salva"
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "LOADING_ERROR": "Errore durante il caricamento della lista utenti"
+      },
+      "CREATE": {
+        "SUCCESS": "Utente {{ value }} creato con successo!",
+        "ERROR": "Errore durante la creazione dell'utente {{ value }}"
+      },
+      "UPDATE": {
+        "SUCCESS": "Utente {{ value }} modificato con successo!",
+        "ERROR": "Errore durante la modifica dell'utente {{ value }}"
+      },
+      "TOGGLE": {
+        "SUCCESS_ENABLE": "Utente {{ value }} abilitato con successo!",
+        "SUCCESS_DISABLE": "Utente {{ value }} disabilitato con successo!",
+        "ERROR_ENABLE": "Errore durante l'abilitazione dell'utente {{ value }}",
+        "ERROR_DISABLE": "Errore durante la disabilitazione dell'utente {{ value }}"
+      }
+    }
+  },
+  "ROLES": {
+    "TITLE": "Ruoli",
+    "SEARCH_PLACEHOLDER": "Cerca per nome",
+    "REFRESH": "Ricarica",
+    "TABLE": {
+      "NAME": "Nome",
+      "DESCRIPTION": "Descrizione",
+      "PERMISSIONS": "Permessi",
+      "PERMISSION_NUMBER": "permessi",
+      "ACTIONS": "Azioni",
+      "NO_ROLES": "Nessun ruolo"
+    },
+    "UPSERT": {
+      "CREATE_ROLE": "Crea ruolo",
+      "EDIT_ROLE": "Modifica ruolo",
+      "NAME_PLACEHOLDER": "Nome",
+      "DISPLAY_NAME_PLACEHOLDER": "Nome Visualizzato",
+      "DESCRIPTION_PLACEHOLDER": "Descrizione",
+      "AUHTORITIES_PLACEHOLDER": "Permessi",
+      "AUTHORITIES_SELECTED": "selezionate",
+      "BUTTONS": {
+        "CANCEL": "Annulla",
+        "SAVE": "Salva"
+      }
+    },
+    "DIALOG": {
+      "DELETE": {
+        "TITLE": "Cancella ruolo",
+        "TEXT": "Sei sicuro di voler cancellare il ruolo {{ value }}",
+        "BUTTONS": {
+          "DELETE": "Conferma",
+          "CANCEL": "Annulla"
+        }
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "ROLES_ERROR_LOADING": "Errore durante il caricamento della lista dei ruoli",
+        "AUTHORITIES_ERROR_LOADING": "Errore durante il caricamento della lista dei permessi in app"
+      },
+      "CREATE": {
+        "SUCCESS": "Ruolo {{ value }} creato con successo!",
+        "ERROR": "Errore durante la creazione del ruolo {{ value }}"
+      },
+      "UPDATE": {
+        "SUCCESS": "Ruolo {{ value }} modificato con successo!",
+        "ERROR": "Errore durante la modifica del ruolo {{ value }}"
+      },
+      "DELETE": {
+        "SUCCESS": "Ruolo {{ value }} cancellato con successo!",
+        "ERROR": "Errore durante la cancellazione del ruolo {{ value }}"
+      },
+      "SUPERADMIN_NOT_EDITABLE": "Il ruolo SUPERADMIN non può essere modificato",
+      "SUPERADMIN_NOT_DELETABLE": "Il ruolo SUPERADMIN non può essere cancellato"
+    }
+  },
+  "PROFILES": {
+    "TITLE": "Profili",
+    "SEARCH_PLACEHOLDER": "Cerca per nome",
+    "CREATE_BUTTON": "Nuovo",
+    "TABLE": {
+      "NAME": "Nome",
+      "ACTIONS": "Azioni",
+      "NO_PROFILE": "Nessun profilo"
+    },
+    "DIALOG": {
+      "DELETE": {
+        "TITLE": "Cancella profilo",
+        "MESSAGE": "Sei sicuro di voler cancellare profilo?",
+        "BUTTONS": {
+          "CANCEL": "Annulla",
+          "DELETE": "Cancella"
+        }
+      }
+    },
+    "UPSERT": {
+      "CREATE": "Crea profilo",
+      "EDIT": "Modifica profilo",
+      "NAME_PLACEHOLDER": "Nome",
+      "NAME_REQUIRED": "Nome è obbligatorio",
+      "DISPLAYNAME_PLACEHOLDER": "Nome visualizzato",
+      "DISPLAYNAME_REQUIRED": "Nome visualizzato è obbligatorio",
+      "BUTTONS": {
+        "CANCEL": "Annulla",
+        "SAVE": "Salva"
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "LOADING_ERROR": "Errore durante il caricamento della lista profili"
+      },
+      "CREATE": {
+        "SUCCESS": "Profilo creato con successo!",
+        "ERROR": "Errore durante la creazione Profilo"
+      },
+      "UPDATE": {
+        "SUCCESS": "Profilo modificato con successo!",
+        "ERROR": "Errore durante la modifica profilo"
+      },
+      "DELETE": {
+        "SUCCESS": "Profilo cancellato con successo!",
+        "ERROR": "Errore durante la cancellazione profilo"
+      }
+    },
+    "ERRORS": {
+      "PROFILE_CTRL_PROFILE_NOT_FOUND": "Profilo non trovato",
+      "PROFILE_CTRL_DUPLICATE_PROFILE": "Profilo duplicato",
+      "PROFILE_CTRL_INVALID_PARAMETERS": "Parametri non validi",
+      "PROFILE_CTRL_ROLE_NOT_FOUND": "Ruolo non trovato"
+    }
+  },
+  "ADMIN_SETTINGS": {
+    "TITLE": "Configurazioni",
+    "imap_address": "Indirizzo IMAP",
+    "imap_host": "Host IMAP",
+    "imap_password": "Password IMAP",
+    "imap_port": "Porta IMAP",
+    "imap_tls_active": "TLS IMAP attivo",
+    "smtp_address": "Indirizzo SMTP",
+    "smtp_host": "Host SMTP",
+    "smtp_password": "Password SMTP",
+    "smtp_port": "Porta SMTP",
+    "smtp_tls_active": "TLS SMTP attivo",
+    "file_storage_path": "File Storage Path",
+    "MESSAGES": {
+      "SUCCESS": "Aggiornamento riuscito con successo!",
+      "ERROR": "Errore nell'aggiornamento della configurazione!"
+    }
+  },
+  "LIBRARIES": {
+    "TITLE": "Librerie",
+    "SEARCH_PLACEHOLDER": "Cerca per nome",
+    "REFRESH": "Ricarica",
+    "CREATE_BUTTON": "Crea",
+    "CLEAR_SEARCH": "Cancella ricerca",
+    "TABLE": {
+      "NAME": "Nome",
+      "ADDRESS": "Indirizzo",
+      "FIRSTDATE": "Data di apertura",
+      "OPENINGHOUR": "Ora di apertura",
+      "CLOSEHOUR": "Ora di chiusura",
+      "LASTINVERTORY": "Data e ora dell'ultimo inventario"
+    },
+    "UPSERT": {
+      "TITLE": "Crea Libreria",
+      "EDIT_TITLE": "Modifica Libreria",
+      "LIBRARYNAME_PLACEHOLDER": "Nome Libreria",
+      "LOCATIONADDRESS_PLACEHOLDER": "Indirizzo",
+      "DATE_PLACEHOLDER": "Data di prima apertura",
+      "OPENHOUR_PLACEHOLDER": "Ora di apertura",
+      "CLOSEHOUR_PLACEHOLDER": "Ora di chiusura",
+      "LASTINVENTORYDATETIME": "Data e ora ultimo inventario",
+      "LASTINVENTORYDATE": "Data Ultimo Inventario",
+      "LASTINVENTORYTIME": "Ora Ultimo Inventario",
+      "BUTTONS": {
+        "CANCEL": "Annulla",
+        "SAVE": "Salva"
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "ROLES_ERROR_LOADING": "Errore durante il caricamento della lista librerie",
+        "AUTHORITIES_ERROR_LOADING": "Errore durante il caricamento dei permessi"
+      },
+      "CREATE": {
+        "SUCCESS": "Libreria creata con successo!",
+        "ERROR": "Errore durante la creazione della libreria"
+      }
+    }
+  },
+  "AUTHORITIES": {
+    "KEYS": {
+      "AUTHORITY": "Permessi",
+      "ROLE": "Ruolo",
+      "PROFILE": "Profilo",
+      "ADMIN_SETTINGS": "Impostazioni Amministratore",
+      "BOOK": "Libro",
+      "LIBRARY": "Libreria",
+      "CREDENTIAL": "Credenziali",
+      "AUTHOR": "Autore",
+      "USER": "Utente"
+    },
+    "VIEW_AUTHORITY": "Visualizza permessi",
+    "ADD_CREDENTIAL": "Aggiungi credenziali",
+    "MODIFY_CREDENTIAL": "Modifica credenziali",
+    "DELETE_CREDENTIAL": "Cancella credenziali",
+    "VIEW_CREDENTIAL": "Visualizza credenziali",
+    "ADD_USER": "Aggiungi utente",
+    "MODIFY_USER": "Modifica utente",
+    "DELETE_USER": "Elimina utente",
+    "VIEW_USER": "Visualizza utente",
+    "ADD_ROLE": "Aggiungi ruolo",
+    "MODIFY_ROLE": "Modifica ruolo",
+    "DELETE_ROLE": "Elimina ruolo",
+    "VIEW_ROLE": "Visualizza ruolo",
+    "ADD_PROFILE": "Aggiungi profilo",
+    "MODIFY_PROFILE": "Modifica profilo",
+    "DELETE_PROFILE": "Cancella profilo",
+    "VIEW_PROFILE": "Visualizza profilo",
+    "MODIFY_ADMIN_SETTINGS": "Modifica impostazioni",
+    "VIEW_ADMIN_SETTINGS": "Visualizza impostazioni",
+    "ADD_BOOK": "Aggiungi libro",
+    "MODIFY_BOOK": "Modifica libro",
+    "DELETE_BOOK": "Elimina libro",
+    "VIEW_BOOK": "Visualizza libro",
+    "ADD_AUTHOR": "Aggiungi autore",
+    "MODIFY_AUTHOR": "Modifica autore",
+    "DELETE_AUTHOR": "Elimina autore",
+    "VIEW_AUTHOR": "Visualizza autore",
+    "ADD_LIBRARY": "Aggiungi libreria",
+    "MODIFY_LIBRARY": "Modifica libreria",
+    "DELETE_LIBRARY": "Elimina libreria",
+    "VIEW_LIBRARY": "Visualizza libreria",
+    "ADD_LIBRARY_FILE_RECORD": "Aggiungi file libreria",
+    "DELETE_LIBRARY_FILE_RECORD": "Elimina file libreria",
+    "VIEW_LIBRARY_FILE_RECORD": "Visualizza file libreria"
+  },
+  "DOCUMENTS": {
+    "TITLE": "Documenti Libreria",
+    "TABLE": {
+      "NAME": "Nome",
+      "TYPE": "Tipo",
+      "MIMETYPE": "Tipo di File",
+      "CREATIONDATETYPE": "Creato il",
+      "NO_DOCUMENT": "No document"
+    },
+    "DIALOG": {
+      "DELETE": {
+        "TITLE": "Cancella documento",
+        "TEXT": "Sei sicuro di voler eliminare il documento chiamato {{ value }}",
+        "BUTTONS": {
+          "DELETE": "Conferma",
+          "CANCEL": "Annulla"
+        }
+      }
+    },
+    "UPSERT": {
+      "TITLE": "Crea Documento",
+      "TYPE": "Tipo",
+      "UPLOAD_FILE": "Carica il tuo file"
+    },
+    "MESSAGES": {
+      "LIST": {
+        "ROLES_ERROR_LOADING": "Errore durante il caricamento della lista librerie",
+        "AUTHORITIES_ERROR_LOADING": "Errore durante il caricamento dei permessi"
+      },
+      "CREATE": {
+        "SUCCESS": "Documento creata con successo!",
+        "ERROR": "Errore durante la creazione della documento"
+      },
+      "DELETE": {
+        "SUCCESS": "Documento   {{ value }} cancellato con successo!",
+        "ERROR": "Errore durante la cancellazione del documento  {{ value }}"
+      }
+    }
+  },
+  "ENUMS": {
+    "LIBRARY_DOCUMENT_TYPE": {
+      "LICENSE": "Licenza",
+      "NEXT_EVENT": "Prossimo evento",
+      "OTHER": "Altro"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Il Mio Profilo",
+    "ACCOUNT": {
+      "TITLE": "Account",
+      "SUBTITLE": "Gestisci il tuo profilo pubblico e le informazioni private",
+      "LABEL": "Cambia qui la tua immagine del profilo e le informazioni!",
+      "PERSONALINFO": "Informazioni personali",
+      "NAME": "Nome",
+      "LASTNAME": "Cognome",
+      "MESSAGES": {
+        "SUCCESS": "Profilo aggiornato con successo",
+        "ERROR": "Aggiornamento profilo non riuscito. Riprova"
+      }
+    },
+    "SECURITY": {
+      "TITLE": "Sicurezza",
+      "SUBTITLE": "Gestisci le tue preferenze per la password",
+      "LABEL": "Cambia la tua password",
+      "PASSWORD": "Password attuale",
+      "NEWPASSWORD": "Nuova password",
+      "CONFIRMPASSWORD": "Conferma password",
+      "PASSWORDS_DO_NOT_MATCH": "Le password non corrispondono.",
+      "MESSAGES": {
+        "SUCCESS": "Password aggiornata con successo",
+        "ERROR": "Aggiornamento della password non riuscito. Riprova"
+      }
+    }
+  }
+}

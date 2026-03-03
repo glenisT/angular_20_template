@@ -1,0 +1,25 @@
+.login-container {
+  // max-width: 400px;
+  // margin: 0 auto;
+  // padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+
+  // background-color: #dc2626;
+  // flex-direction: column;
+  // gap: 1.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.error-message {
+  color: #dc2626;
+}
+.welcome-container {
+  background-color: #dc2626;
+  height: 100%;
+  width: 50%;
+}

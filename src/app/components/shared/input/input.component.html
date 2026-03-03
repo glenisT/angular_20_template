@@ -1,0 +1,46 @@
+<mat-form-field appearance="outline" class="w-full" [class.field-valid]="control.valid && control.touched"
+  [class.field-invalid]="control.invalid && control.touched">
+  <mat-label>{{ label }}</mat-label>
+
+  @if (icon) {
+  <mat-icon matPrefix>{{ icon }}</mat-icon>
+  }
+
+  <input matInput [id]="id" [type]="inputType" [formControl]="activeControl" [placeholder]="placeholder"
+    (keydown)="onKeyDown($event)" />
+
+  <!-- Error messages (shown only after touch) -->
+  @if (control.touched && control.hasError('required')) {
+  <mat-error>
+    {{ label }} {{ 'VALIDATION.REQUIRED' | translate }}
+  </mat-error>
+  }
+
+  @if (control.touched && control.hasError('email')) {
+  <mat-error>
+    {{ 'VALIDATION.EMAIL_INVALID' | translate }}
+  </mat-error>
+  }
+
+  @if (
+  control.touched &&
+  control.hasError('pattern') &&
+  type !== 'password'
+  ) {
+  <mat-error>
+    {{ 'VALIDATION.PATTERN_INVALID' | translate }}
+  </mat-error>
+  }
+
+  <!--
+  @if (
+    control.touched &&
+    control.hasError('pattern') &&
+    type === 'password'
+  ) {
+    <mat-error>
+      {{ 'VALIDATION.PASSWORD_INVALID' | translate }}
+    </mat-error>
+  }
+  -->
+</mat-form-field>

@@ -1,0 +1,77 @@
+// Stili per il datepicker migliorato
+:host {
+  display: block;
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+  
+  // Migliora l'aspetto del campo
+  .mat-mdc-text-field-wrapper {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  // Stile per il toggle del datepicker
+  .mat-datepicker-toggle {
+    color: var(--ubq-primary);
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--ubq-secondary);
+    }
+  }
+
+  // Stile per il toggle del timepicker
+  .mat-timepicker-toggle {
+    color: var(--ubq-primary);
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: var(--ubq-secondary);
+    }
+  }
+  
+  // Migliora l'aspetto delle etichette
+  .mat-mdc-floating-label {
+    font-weight: 500;
+    color: var(--ubq-primary);
+  }
+  
+  // Stile per i messaggi di errore
+  .mat-mdc-form-field-error {
+    font-size: 0.85rem;
+    margin-top: 4px;
+  }
+}
+
+// Container principale per il datepicker
+.datepicker-container {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+
+  .date-field,
+  .time-field {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // Responsive: stack on mobile
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+
+    .date-field,
+    .time-field {
+      width: 100%;
+    }
+  }
+}
+
+

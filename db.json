@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "name": "John",
+      "surname": "Doe",
+      "username": "johndoe",
+      "password": "Temporary@2",
+      "email": "t1@gmail.com",
+      "role": [
+        "user",
+        "admin"
+      ],
+      "id": "7b7f"
+    },
+    {
+      "id": "939636dd-45e4-4387-a5ff-92a92cf3869d",
+      "name": "Jane",
+      "surname": "Doe",
+      "username": "janeDoe",
+      "email": "t2@gmail.com",
+      "password": "Temporary@2",
+      "role": [
+        "user"
+      ]
+    },
+    {
+      "id": "241eea0d-62e4-48d7-b23e-4777fbdebd21",
+      "name": "Place",
+      "surname": "Holder",
+      "username": "placeholder",
+      "email": "placeholder@gmail.com",
+      "password": "Temporary@2",
+      "role": [
+        "user",
+        "editor"
+      ]
+    },
+    {
+      "id": "9acde46e-45f7-40ea-8131-5c8045c316e1",
+      "name": "Alpha",
+      "surname": "Beta",
+      "username": "alphabeta",
+      "email": "t3@gmail.com",
+      "password": "Temporary@2",
+      "role": [
+        "user"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "name": "rr",
+      "description": "rrter soidaoire oaijsdoiar oxidjaeo",
+      "permissions": [
+        "user",
+        "admin"
+      ],
+      "id": "16"
+    },
+    {
+      "name": "b.test",
+      "description": "testtest029292",
+      "permissions": [
+        "user",
+        "editor",
+        "admin"
+      ],
+      "id": "18"
+    },
+    {
+      "name": "b.test",
+      "description": "test",
+      "permissions": [
+        "user"
+      ],
+      "id": "20"
+    },
+    {
+      "id": "b52a8e44-ee4a-4ac2-a4e9-c20b3ea3225f",
+      "name": "Admin",
+      "description": "sasd were witi soseon ruidi sdise widisjwe. Migh sdend eimeic eiwnc ein, tos dje djcme. ROEPRKEN",
+      "permissions": [
+        "admin",
+        "user"
+      ]
+    }
+  ],
+  "authenticate": {
+    "jwttoken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb2dldGVsc3VwZXJhZG1pbiIsImlzcyI6ImF1dGgwIiwiZXhwIjoxNjg3OTY0OTQ3LCJpYXQiOjE2ODc4Nzg1NDcsImF1dGhvcml0aWVzIjpbIkRFTEVURV9VU0VSIiwiTU9ESUZZX1VTRVIiLCJWSUVXX1VTRVIiLCJWSUVXX1JPTEUiLCJERUxFVEVfUk9MRSIsIkFERF9ST0xFIiwiQUREX1VTRVIiLCJNT0RJRllfUk9MRSJdfQ.XtIyPGzVLNyF32vWWKPCmCxz3Sr-nFYQmdsU7XOdQ7Q"
+  }
+}

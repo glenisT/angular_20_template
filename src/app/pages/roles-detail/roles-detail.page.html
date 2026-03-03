@@ -1,0 +1,64 @@
+<div class="home-container px-4 mt-4">
+  <div class="ubq-bg-white">
+    <div class="header-container">
+      <div class="info">
+        <h1 class="ubuntu-heading">
+          {{ isEdit ? translationService.translate('ROLES.UPSERT.EDIT_ROLE') : translationService.translate('ROLES.UPSERT.CREATE_ROLE') }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <form [formGroup]="form" class="mt-8">
+    <!-- Name -->
+    <div class="mt-8 flex gap-4">
+      <mat-form-field class="w-1/2">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" />
+        <mat-error *ngIf="form.get('name')?.hasError('required')">
+          Role name is required
+        </mat-error>
+      </mat-form-field>
+
+      <!-- Permissions -->
+      <mat-form-field class="w-1/2">
+        <mat-label>Permissions</mat-label>
+        <mat-select formControlName="permissions" multiple>
+          <mat-option value="admin">Admin</mat-option>
+          <mat-option value="user">User</mat-option>
+          <mat-option value="editor">Editor</mat-option>
+        </mat-select>
+        <mat-error *ngIf="form.get('permissions')?.hasError('required')">
+          Permissions are required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Description -->
+    <div class="mt-4 flex gap-4">
+      <mat-form-field class="w-full">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description" rows="4"></textarea>
+        <mat-hint align="end">
+          {{ form.get('description')?.value?.length || 0 }}/100
+        </mat-hint>
+        <mat-error *ngIf="form.get('description')?.hasError('required')">
+          Description is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-8 flex justify-end gap-4 px-12">
+      <button type="button" class="button-secondary" mat-fab extended (click)="cancel()">
+        Cancel
+      </button>
+
+      <button type="button" class="button-primary" mat-fab extended [disabled]="form.invalid"
+        (click)="isEdit ? updateRole() : createRole()">
+        Save
+      </button>
+    </div>
+  </form>
+</div>

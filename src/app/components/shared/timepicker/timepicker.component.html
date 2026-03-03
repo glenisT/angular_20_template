@@ -1,0 +1,22 @@
+<mat-form-field appearance="outline" class="w-full">
+    <mat-label>{{ label }}</mat-label>
+
+    <input matInput [formControl]="control" [matTimepicker]="picker" [matTimepickerMin]="min"
+        [matTimepickerMax]="max" />
+
+    <mat-timepicker-toggle matIconSuffix [for]="picker" />
+    <mat-timepicker #picker />
+
+    <!-- Error messages (shown only after touch) -->
+    @if (control.touched && control.hasError('required')) {
+    <mat-error>
+        {{ label }} {{ 'VALIDATION.REQUIRED' | translate }}
+    </mat-error>
+    }
+
+    @if (control.touched && control.hasError('matTimepickerParse')) {
+    <mat-error>
+        {{ 'VALIDATION.TIME_INVALID' | translate }}
+    </mat-error>
+    }
+</mat-form-field>

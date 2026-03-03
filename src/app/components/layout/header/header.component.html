@@ -1,0 +1,56 @@
+<mat-toolbar class="mat-elevation-z4 layout-header flex justify-between">
+  <!-- Menu a sinistra -->
+  <div>
+    <button mat-icon-button (click)="onToggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+
+  <div>
+    <!-- Bandiera lingua -->
+    <button mat-icon-button [matMenuTriggerFor]="langMenu">
+      <mat-icon class="ubq-color-primary">flag</mat-icon>
+    </button>
+
+    <mat-menu #langMenu="matMenu">
+      @for (lang of ['it', 'en']; track lang) {
+      <button mat-menu-item (click)="changeLanguage(lang)" [class.selected-language]="currentLanguage === lang">
+        @if (lang === 'it') {
+        🇮🇹
+        } @else {
+        🇬🇧
+        }
+
+        <span class="ml-2">
+          {{
+          lang === 'it'
+          ? translationService.translate('TOOLBAR.LANG.ITA')
+          : translationService.translate('TOOLBAR.LANG.ENG')
+          }}
+        </span>
+
+        @if (currentLanguage === lang) {
+        <mat-icon class="ml-auto">check</mat-icon>
+        }
+      </button>
+      }
+    </mat-menu>
+
+    <!-- Icona profilo -->
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon class="ubq-color-primary">account_circle</mat-icon>
+    </button>
+
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item (click)="goToProfile()">
+        <mat-icon>person</mat-icon>
+        <span>{{ translationService.translate('TOOLBAR.PROFILE') }}</span>
+      </button>
+
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>{{ translationService.translate('TOOLBAR.LOGOUT') }}</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

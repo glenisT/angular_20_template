@@ -1,0 +1,27 @@
+.layout-header {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #ffffff;
+}
+
+.toolbar-title {
+  flex: 1; // spinge gli elementi a destra
+}
+
+.mat-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+  &.selected-language {
+    background-color: var(--ubq-primary-50);
+    color: var(--ubq-primary);
+    font-weight: 500;
+    
+    mat-icon {
+      color: var(--ubq-primary);
+    }
+  }
+} 

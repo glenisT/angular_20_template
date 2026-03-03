@@ -1,0 +1,67 @@
+<div class="authority-select-wrapper" [class.field-valid]="control.valid && control.touched"
+  [class.field-invalid]="control.invalid && control.touched">
+  @if (placeholder) {
+  <label class="authority-select-label">
+    {{ placeholder }}
+  </label>
+  }
+
+  <div class="authority-select-container">
+    @if (getSelectedCount() > 0) {
+    <div class="selected-info">
+      {{ getSelectedCount() }} / {{ getTotalCount() }}
+      {{ 'ROLES.UPSERT.AUTHORITIES_SELECTED' | translate }}
+    </div>
+    }
+
+    <div class="categories-list">
+      @for (category of categories; track category.category) {
+      <div class="category-item">
+        <!-- Category header -->
+        <div class="category-header" (click)="toggleCategory(category.category)">
+          <mat-checkbox class="category-checkbox" [checked]="category.allSelected"
+            [indeterminate]="category.someSelected" (click)="$event.stopPropagation()"
+            (change)="onCategoryToggle(category)" />
+
+          <span class="category-name">
+            {{ formatCategoryKey(category.category) }}
+          </span>
+
+          <span class="expand-icon">
+            {{ isCategoryExpanded(category.category) ? '▼' : '▶' }}
+          </span>
+        </div>
+
+        <!-- Authorities of the category -->
+        @if (isCategoryExpanded(category.category)) {
+        <div class="authorities-list">
+          @for (authority of category.authorities; track authority) {
+          <div class="authority-item">
+            <mat-checkbox class="authority-checkbox" [checked]="isAuthoritySelected(authority)"
+              (change)="onAuthorityToggle(authority, category)">
+              <span class="authority-name">
+                {{ 'AUTHORITIES.' + authority | translate }}
+              </span>
+            </mat-checkbox>
+          </div>
+          }
+        </div>
+        }
+      </div>
+      }
+    </div>
+
+    @if (categories.length === 0) {
+    <div class="no-data">
+      {{ 'ROLES.UPSERT.NO_AUTHORITIES' | translate }}
+    </div>
+    }
+  </div>
+
+  <!-- Error message -->
+  @if (control.touched && control.hasError('required')) {
+  <div class="error-message">
+    {{ 'VALIDATION.SELECT_REQUIRED' | translate }}
+  </div>
+  }
+</div>

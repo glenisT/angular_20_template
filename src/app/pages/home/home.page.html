@@ -1,0 +1,340 @@
+<div class="home-container px-4 mt-4">
+  <div class="ubq-bg-white">
+    <div class="header-container">
+      <div class="info">
+        <h1 class="ubuntu-heading">{{ translationService.translate('MENU.HOME.TITLE') }}
+        </h1>
+        <h6 style="color:var(--ubq-neutral-variant-70)" class="mt-2">{{
+          translationService.translate('MENU.HOME.WELCOME')}}, {{ user?.name }} {{ user?.surname }}!
+          {{ translationService.translate('MENU.HOME.INFO') }}</h6>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Cards -->
+  <div class="mt-8 grid h-64 w-full grid-cols-4 gap-8">
+    <mat-card class="stats-card w-full h-full">
+      <!-- Top-left icon -->
+      <mat-icon class="user-icon">perm_identity</mat-icon>
+
+      <!-- Content -->
+      <div class="mt-2">
+        <div class="title">{{ translationService.translate('HOME.CARDS.FIRST_CARD_TITLE') }}</div>
+
+        <div class="value">2.8K</div>
+
+        <div class="flex items-end justify-start gap-2">
+          <mat-chip class="trend-chip" selected>
+            <mat-icon matChipAvatar style="color: var(--account-card-icon);">trending_up</mat-icon>
+            <p>4.2%</p>
+          </mat-chip>
+          <span>{{ translationService.translate('HOME.CARDS.VS_LAST_MONTH') }}</span>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="stats-card w-full h-full">
+      <!-- Top-left icon -->
+      <mat-icon class="user-icon">warning_amber</mat-icon>
+
+      <!-- Content -->
+      <div class="mt-2">
+        <div class="title-alt">{{ translationService.translate('HOME.CARDS.SECOND_CARD_TITLE') }}</div>
+
+        <div class="value">127</div>
+
+        <div class="flex items-center justify-start gap-2">
+          <div class="title">Acme corp</div>
+          <div class="title">$24,000</div>
+          <mat-chip class="trend-chip-red" selected>
+            <p class="p-red">{{ translationService.translate('HOME.CHIPS.HIGH') }}</p>
+          </mat-chip>
+        </div>
+
+        <div class="flex items-end justify-start gap-2">
+          <mat-chip class="trend-chip-red" selected>
+            <mat-icon matChipAvatar style="color: var(--red-chip-text);">trending_down</mat-icon>
+            <p class="p-red">4.2%</p>
+          </mat-chip>
+          <span>{{ translationService.translate('HOME.CARDS.VS_LAST_MONTH') }}</span>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="stats-card w-full h-full">
+      <!-- Top-left icon -->
+      <mat-icon class="user-icon">attach_money</mat-icon>
+
+      <!-- Content -->
+      <div class="mt-2">
+        <div class="title-alt">{{ translationService.translate('HOME.CARDS.THIRD_CARD_TITLE') }}</div>
+
+        <div class="value">84.6K</div>
+
+        <div class="flex items-end justify-start gap-2">
+          <mat-chip class="trend-chip" selected>
+            <mat-icon matChipAvatar style="color: var(--account-card-icon);">trending_up</mat-icon>
+            <p>15%</p>
+          </mat-chip>
+          <span>{{ translationService.translate('HOME.CARDS.VS_LAST_MONTH') }}</span>
+        </div>
+      </div>
+    </mat-card>
+
+    <mat-card class="stats-card w-full h-full">
+      <!-- Top-left icon -->
+      <mat-icon class="user-icon">show_chart</mat-icon>
+
+      <!-- Content -->
+      <div class="mt-2">
+        <div class="title-alt">{{ translationService.translate('HOME.CARDS.FOURTH_CARD_TITLE') }}</div>
+
+        <div class="value">8.8K</div>
+
+        <div class="flex items-end justify-start gap-2">
+          <mat-chip class="trend-chip" selected>
+            <mat-icon matChipAvatar style="color: var(--account-card-icon);">trending_up</mat-icon>
+            <p>2.1%</p>
+          </mat-chip>
+          <span>{{ translationService.translate('HOME.CARDS.VS_LAST_MONTH') }}</span>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- Accounts to review card -->
+  <mat-card class="account-review-card mt-8 p-4">
+    <!-- Header -->
+    <div class="flex items-center justify-start gap-2">
+      <mat-icon class="warning-icon">warning_amber</mat-icon>
+      <span class="value">{{ translationService.translate('HOME.CARDS.ACCOUNTS_TO_REVIEW') }}</span>
+    </div>
+
+    <!-- Account row -->
+    <div class="flex items-center justify-start gap-2">
+      <mat-icon>person_outline</mat-icon>
+
+      <span>Acme Corp</span>
+
+      <mat-chip class="trend-chip-red" selected>
+        <p class="p-red">{{ translationService.translate('HOME.CHIPS.HIGH') }}</p>
+      </mat-chip>
+
+      <span class="meta">
+        Usage,&nbsp;&nbsp;Engagement&nbsp;&nbsp;$12,000&nbsp;&nbsp;25&nbsp;&nbsp;Jane Doe
+      </span>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center justify-start gap-2 mt-2">
+      <button class="button-secondary" matFab extended>
+        {{ translationService.translate('HOME.BUTTONS.VIEW_ACCOUNT') }}
+      </button>
+
+      <button class="button-primary" matFab extended>
+        {{ translationService.translate('HOME.BUTTONS.START_PLAYBOOK') }}
+      </button>
+    </div>
+  </mat-card>
+
+  <!-- Charts Grid -->
+  <mat-card class="mt-8">
+    <div class="grid w-full grid-cols-2 justify-center gap-8">
+      <div style="border-right: 1px solid #c7c7c7bf; border-bottom: 1px solid #c7c7c7bf; border-radius: 15px;">
+        <ngx-charts-bar-vertical-2d [view]="view" [results]="multi" [scheme]="colorScheme" [gradient]="gradient"
+          [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [legendTitle]="legendTitle"
+          [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel" (select)="onSelect($event)">
+        </ngx-charts-bar-vertical-2d>
+      </div>
+
+      <div style="border-left: 1px solid #c7c7c7bf; border-bottom: 1px solid #c7c7c7bf; border-radius: 15px;">
+        <ngx-charts-area-chart [view]="view" [results]="lineData" [scheme]="colorScheme" [xAxis]="showXAxis"
+          [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [autoScale]="true" [timeline]="false"
+          (select)="onSelect($event)">
+        </ngx-charts-area-chart>
+      </div>
+
+      <div style="border-right: 1px solid #c7c7c7bf; border-top: 1px solid #c7c7c7bf; border-radius: 15px;">
+        <ngx-charts-pie-chart [view]="view" [results]="pieData" [scheme]="colorScheme" [legend]="showLegend"
+          [labels]="showLabels" [explodeSlices]="explodeSlices" [doughnut]="doughnut" (select)="onSelect($event)">
+        </ngx-charts-pie-chart>
+      </div>
+
+      <div style="border-left: 1px solid #c7c7c7bf; border-top: 1px solid #c7c7c7bf; border-radius: 15px;">
+        <ngx-charts-line-chart [view]="view" [results]="lineData" [scheme]="colorScheme" [xAxis]="showXAxis"
+          [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [curve]="curve" [autoScale]="true"
+          (select)="onSelect($event)">
+        </ngx-charts-line-chart>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Final Cards -->
+  <div class="mt-4 grid  w-full grid-cols-3 justify-center gap-4">
+    <!-- First card -->
+    <div class="col-span-1">
+      <mat-card class="account-review-card mt-8 p-4">
+        <!-- Header -->
+        <div class="flex items-center justify-start gap-2">
+          <span class="value">{{ translationService.translate('HOME.CARDS.PORTOFOLIO_OVERVIEW') }}</span>
+        </div>
+
+        <!-- Account row -->
+        <div class="flex items-center justify-start gap-2">
+          <mat-chip class="trend-chip-orange" selected>
+            <p class="p-orange">{{ translationService.translate('HOME.CHIPS.AT_RISK') }}</p>
+          </mat-chip>
+
+          <div class="trend-chip-alt">
+            <mat-icon style="color: var(--account-card-icon); background-color: none;">trending_up</mat-icon>
+          </div>
+
+          <p>+5.2 pts</p>
+        </div>
+
+        <div class="flex items-center justify-start gap-2 mt-2">
+          <mat-chip class="trend-chip-red" selected>
+            <mat-icon matChipAvatar style="color: var(--red-chip-text);">trending_down</mat-icon>
+            <p class="p-red">{{ translationService.translate('HOME.CHIPS.LOGIN_FREQUENCY') }} -12%</p>
+          </mat-chip>
+        </div>
+
+        <div class="flex items-center justify-start gap-2 mt-2">
+          <mat-chip class="trend-chip-red" selected>
+            <mat-icon matChipAvatar style="color: var(--red-chip-text);">trending_down</mat-icon>
+            <p class="p-red">{{ translationService.translate('HOME.CHIPS.FEATURE_ADOPTION') }} -8%</p>
+          </mat-chip>
+        </div>
+
+        <mat-card class="stats-card w-full mt-4">
+          <!-- Content -->
+          <div class="mt-2">
+            <div class="flex items-center justify-between gap-2 px-2">
+              <div class="title-alt">{{ translationService.translate('HOME.BIGGEST_MOVERS') }}</div>
+
+              <div class="title-alt">{{ translationService.translate('HOME.LAST_UPDATED') }} 2h {{
+                translationService.translate('HOME.AGO') }}</div>
+            </div>
+
+            <div class="flex items-center justify-start gap-2">
+              <div class="title">Acme corp</div>
+              <mat-icon style="color: var(--red-chip-text);">trending_down</mat-icon>
+              <p class="p-red">-18</p>
+            </div>
+
+            <div class="flex items-center justify-start gap-2">
+              <div class="title">Globex Ltd</div>
+              <mat-icon style="color: var(--red-chip-text);">trending_down</mat-icon>
+              <p class="p-red">-12</p>
+            </div>
+
+            <div class="flex items-center justify-start gap-2">
+              <div class="title">Initech</div>
+              <mat-icon style="color: var(--red-chip-text);">trending_down</mat-icon>
+              <p class="p-red">-9</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center gap-2 mt-2">
+            <button class="button-secondary-alt" matFab extended>
+              {{ translationService.translate('HOME.BUTTONS.VIEW_ALL') }}
+            </button>
+          </div>
+        </mat-card>
+      </mat-card>
+    </div>
+
+    <!-- Second card -->
+    <div class="col-span-2">
+      <mat-card class="account-review-card mt-8 p-4">
+        <!-- Header -->
+        <div class="flex items-center justify-start gap-2">
+          <span class="value">{{ translationService.translate('HOME.CARDS.REVIEW') }}</span>
+        </div>
+
+        <mat-card class="account-review-card p-4">
+          <!-- Header -->
+          <div class="flex items-center justify-start gap-2">
+            <mat-icon class="warning-icon user-icon"
+              style="background-color: var(--warning-chip);">warning_amber</mat-icon>
+            <span class="value">{{ translationService.translate('HOME.CARDS.USAGE_DROP') }}</span>
+          </div>
+
+          <!-- Account row -->
+          <div class="flex items-center justify-start gap-2">
+            <mat-icon>person_outline</mat-icon>
+
+            <span>Acme Corp</span>
+
+            <mat-chip class="trend-chip-red" selected>
+              <p class="p-red">{{ translationService.translate('HOME.CHIPS.HIGH') }}</p>
+            </mat-chip>
+
+            <span class="meta">
+              Usage,&nbsp;&nbsp;Engagement&nbsp;&nbsp;$12,000&nbsp;&nbsp;25&nbsp;&nbsp;Jane Doe
+            </span>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center justify-start gap-2 mt-2">
+            <button class="button-secondary" matFab extended>
+              {{ translationService.translate('HOME.BUTTONS.ACKNOWLEDGE') }}
+            </button>
+
+            <button class="button-primary" matFab extended>
+              {{ translationService.translate('HOME.BUTTONS.START_PLAYBOOK') }}
+            </button>
+
+            <button class="button-secondary" matFab extended>
+              <mat-icon>alarm</mat-icon>
+              {{ translationService.translate('HOME.BUTTONS.SNOOZE') }}
+            </button>
+          </div>
+        </mat-card>
+
+        <mat-card class="account-review-card mt-4 p-4">
+          <!-- Header -->
+          <div class="flex items-center justify-start gap-2">
+            <mat-icon class="warning-icon-red user-icon"
+              style="background-color: var(--red-chip-bg);">warning_amber</mat-icon>
+            <span class="value">{{ translationService.translate('HOME.CARDS.PAYMENT_FAILED') }}</span>
+          </div>
+
+          <!-- Account row -->
+          <div class="flex items-center justify-start gap-2">
+            <mat-icon>person_outline</mat-icon>
+
+            <span>Acme Corp</span>
+
+            <mat-chip class="trend-chip-red" selected>
+              <p class="p-red">{{ translationService.translate('HOME.CHIPS.HIGH') }}</p>
+            </mat-chip>
+
+            <span class="meta">
+              Usage,&nbsp;&nbsp;Engagement&nbsp;&nbsp;$12,000&nbsp;&nbsp;25&nbsp;&nbsp;Jane Doe
+            </span>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center justify-start gap-2 mt-2">
+            <button class="button-secondary" matFab extended>
+              {{ translationService.translate('HOME.BUTTONS.ACKNOWLEDGE') }}
+            </button>
+
+            <button class="button-primary" matFab extended>
+              {{ translationService.translate('HOME.BUTTONS.START_PLAYBOOK') }}
+            </button>
+
+            <button class="button-secondary" matFab extended>
+              <mat-icon>alarm</mat-icon>
+              {{ translationService.translate('HOME.BUTTONS.SNOOZE') }}
+            </button>
+          </div>
+        </mat-card>
+      </mat-card>
+    </div>
+  </div>
+</div>

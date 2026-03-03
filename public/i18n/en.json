@@ -1,0 +1,446 @@
+{
+  "MENU": {
+    "DASHBOARD": {
+      "TITLE": "Dashboard"
+    },
+    "HOME": {
+      "TITLE": "Home",
+      "WELCOME": "Welcome back",
+      "INFO": "Here's your churn prevention overview."
+    },
+    "ADMINISTRATION": {
+      "ADMIN": "Administration",
+      "USERS": "Users",
+      "ROLES": "Roles",
+      "PROFILES": "Profiles",
+      "SETTINGS": "Settings",
+      "LIBRARIES": "Libraries"
+    },
+    "ADMIN_SETTINGS": {
+      "TITLE": "Configuration"
+    },
+    "THEME": {
+      "THEME": "Theme Guide",
+      "COLORS": "Colors",
+      "BUTTONS": "Buttons",
+      "TABLES": "Tables",
+      "DATETIME": "Date / Time"
+    }
+  },
+  "VALIDATION": {
+    "REQUIRED": "is required",
+    "USERNAME_INVALID": "Please enter a valid username",
+    "PATTERN_INVALID": "The format entered is not valid",
+    "DATE_INVALID": "Invalid date",
+    "TIME_INVALID": "Invalid time",
+    "PASSWORD_INVALID": " Minimum  8 characters.Must  include  number,  letters, and  special character.",
+    "SELECT_REQUIRED": "Please select at least one option"
+  },
+  "TOOLBAR": {
+    "LANG": {
+      "ITA": "Italian",
+      "ENG": "English"
+    },
+    "PROFILE": "Profile",
+    "LOGOUT": "Log out"
+  },
+  "DIALOG": {
+    "LOGOUT_TITLE": "Are you sure you want to log out?",
+    "YES": "Yes",
+    "NO": "No"
+  },
+  "UNAUTHORIZED": {
+    "TITLE": "Unauthorized",
+    "SUBTITLE": "You are not authorized to view this page!",
+    "SORRY": "Sorry"
+  },
+  "PAGINATOR": {
+    "PAGE_SIZE_LABEL": "Items per page:"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "BIGGEST_MOVERS": "Biggest movers",
+    "LAST_UPDATED": "Last updated",
+    "AGO": "ago",
+    "CARDS": {
+      "VS_LAST_MONTH": "vs last month",
+      "FIRST_CARD_TITLE": "Accounts to review today",
+      "SECOND_CARD_TITLE": "Highest risk by MPR",
+      "THIRD_CARD_TITLE": "Renewals at risk (30d)",
+      "FOURTH_CARD_TITLE": "Expected churn",
+      "ACCOUNTS_TO_REVIEW": "Accounts to Review",
+      "PORTOFOLIO_OVERVIEW": "Portofolio overview",
+      "REVIEW": "Review",
+      "USAGE_DROP": "Usage drop",
+      "PAYMENT_FAILED": "Payment failed"
+    },
+    "CHIPS": {
+      "HIGH": "High",
+      "AT_RISK": "At risk",
+      "LOGIN_FREQUENCY": "Login frequency",
+      "FEATURE_ADOPTION": "Feature adoption"
+    },
+    "BUTTONS": {
+      "VIEW_ACCOUNT": "View account",
+      "START_PLAYBOOK": "Start playbook",
+      "VIEW_ALL": "View all",
+      "ACKNOWLEDGE": "Acknowledge",
+      "SNOOZE": "Snooze"
+    }
+  },
+  "USERS": {
+    "TITLE": "Users",
+    "SEARCH_PLACEHOLDER": "Search by name",
+    "REFRESH": "Refresh",
+    "CREATE_BUTTON": "New",
+    "TABLE": {
+      "FIRSTNAME": "Firstname",
+      "LASTNAME": "Lastname",
+      "USERNAME": "Username",
+      "ROLES": "Roles",
+      "ACTION": "Actions",
+      " NO_USER": "No users"
+    },
+    "DIALOG": {
+      "TOOGLE": {
+        "TITLE_ENABLED": "Enable user",
+        "TITLE_DISABLE": "Disable user",
+        "MESSAGE_ENABLED": "Are you sure you want to enable the user {{ value }}?",
+        "MESSAGE_DISABLE": "Are you sure you want to disable the user {{ value }}?",
+        "BUTTONS": {
+          "CANCEL": "Cancel",
+          "ENABLED": "Enable",
+          "DISABLE": "Disable"
+        }
+      }
+    },
+    "UPSERT": {
+      "CREATE_USER": "Create user",
+      "EDIT_USER": "Edit user",
+      "FIRSTNAME_PLACEHOLDER": "First name",
+      "LASTNAME_PLACEHOLDER": "Last name",
+      "USERNAME_PLACEHOLDER": "Username",
+      "PASSWORD_PLACEHOLDER": "Password",
+      "ROLES_PLACEHOLDER": "Roles",
+      "ENABLED_PLACEHOLDER": "Enabled",
+      "PROFILE_PLACEHOLDER": "Profile",
+      "BUTTONS": {
+        "CANCEL": "Annulla",
+        "SAVE": "Salva"
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "LOADING_ERROR": "Error loading users list"
+      },
+      "CREATE": {
+        "SUCCESS": "User {{ value }} created successfully!",
+        "ERROR": "Error creating user {{ value }}"
+      },
+      "UPDATE": {
+        "SUCCESS": "User {{ value }} updated successfully!",
+        "ERROR": "Error updating user {{ value }}"
+      },
+      "TOGGLE": {
+        "SUCCESS_ENABLE": "User {{ value }} enabled successfully!",
+        "SUCCESS_DISABLE": "User {{ value }} disabled successfully!",
+        "ERROR_ENABLE": "Error enabling user {{ value }}",
+        "ERROR_DISABLE": "Error disabling user {{ value }}"
+      }
+    }
+  },
+  "ROLES": {
+    "TITLE": "Roles",
+    "SEARCH_PLACEHOLDER": "Search by name",
+    "REFRESH": "Refresh",
+    "TABLE": {
+      "NAME": "Name",
+      "DESCRIPTION": "Description",
+      "PERMISSIONS": "Permissions",
+      "PERMISSION_NUMBER": "permissions",
+      "ACTIONS": "Actions",
+      "NO_ROLES": "No roles"
+    },
+    "UPSERT": {
+      "CREATE_ROLE": "Create role",
+      "EDIT_ROLE": "Edit role",
+      "NAME_PLACEHOLDER": "Name",
+      "DISPLAY_NAME_PLACEHOLDER": "Display Name",
+      "DESCRIPTION_PLACEHOLDER": "Description",
+      "AUHTORITIES_PLACEHOLDER": "Authorities",
+      "AUTHORITIES_SELECTED": "selected",
+      "BUTTONS": {
+        "CANCEL": "Cancel",
+        "SAVE": "Save"
+      }
+    },
+    "DIALOG": {
+      "DELETE": {
+        "TITLE": "Delete role",
+        "TEXT": "Are you sure you want to delete role {{ value }}",
+        "BUTTONS": {
+          "DELETE": "Delete",
+          "CANCEL": "Cancel"
+        }
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "ROLES_ERROR_LOADING": "Error loading roles list",
+        "AUTHORITIES_ERROR_LOADING": "Error loading app authorities"
+      },
+      "CREATE": {
+        "SUCCESS": "Role {{ value }} created successfully!",
+        "ERROR": "Error creating role {{ value }}"
+      },
+      "UPDATE": {
+        "SUCCESS": "Role {{ value }} updated successfully!",
+        "ERROR": "Error updating role {{ value }}"
+      },
+      "DELETE": {
+        "SUCCESS": "Role {{ value }} deleted successfully!",
+        "ERROR": "Error deleting role {{ value }}"
+      },
+      "SUPERADMIN_NOT_EDITABLE": "SUPERADMIN role cannot be edited",
+      "SUPERADMIN_NOT_DELETABLE": "SUPERADMIN role cannot be deleted"
+    }
+  },
+  "PROFILES": {
+    "TITLE": "Profile",
+    "SEARCH_PLACEHOLDER": "Find by name",
+    "CREATE_BUTTON": "New",
+    "TABLE": {
+      "NAME": "Name",
+      "ACTIONS": "Actions",
+      "NO_profile": "No profiles"
+    },
+    "DIALOG": {
+      "DELETE": {
+        "TITLE": "Delete profile",
+        "MESSAGE": "Are you sure you want to delete the profile?",
+        "BUTTONS": {
+          "CANCEL": "Back",
+          "DELETE": "Delete"
+        }
+      }
+    },
+    "UPSERT": {
+      "CREATE": "Create profile",
+      "EDIT": "Modify profile",
+      "NAME_PLACEHOLDER": "Name",
+      "NAME_REQUIRED": "Name is required",
+      "DISPLAYNAME_PLACEHOLDER": "Display name",
+      "DISPLAYNAME_REQUIRED": "Display name is required",
+      "BUTTONS": {
+        "CANCEL": "Back",
+        "SAVE": "Save"
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "LOADING_ERROR": "Error profiles loading"
+      },
+      "CREATE": {
+        "SUCCESS": "Profile succesfully created!",
+        "ERROR": "Error during profile creation"
+      },
+      "UPDATE": {
+        "SUCCESS": "Profile succesfully modified!",
+        "ERROR": "Error during profile modification"
+      },
+      "DELETE": {
+        "SUCCESS": "Profile succesfully deleted!",
+        "ERROR": "Error during profile deletion"
+      }
+    },
+    "ERRORS": {
+      "PROFILE_CTRL_PROFILE_NOT_FOUND": "Profile not found",
+      "PROFILE_CTRL_DUPLICATE_PROFILE": "Profile duplicate",
+      "PROFILE_CTRL_INVALID_PARAMETERS": "Invalid parameters",
+      "PROFILE_CTRL_ROLE_NOT_FOUND": "Role not found"
+    }
+  },
+  "ADMIN_SETTINGS": {
+    "TITLE": "Configuration",
+    "imap_address": "IMAP Address",
+    "imap_host": "IMAP Host",
+    "imap_password": "IMAP Password",
+    "imap_port": "IMAP Port",
+    "imap_tls_active": "IMAP TLS Active",
+    "smtp_address": "SMTP Address",
+    "smtp_host": "SMTP Host",
+    "smtp_password": "SMTP Password",
+    "smtp_port": "SMTP Port",
+    "smtp_tls_active": "SMTP TLS Active",
+    "file_storage_path": "File Storage Path",
+    "MESSAGES": {
+      "SUCCESS": "Update with successfully!",
+      "ERROR": "Error updating configuration!"
+    }
+  },
+  "LIBRARIES": {
+    "TITLE": "Libraries",
+    "SEARCH_PLACEHOLDER": "Search by name",
+    "REFRESH": "Refresh",
+    "CREATE_BUTTON": "Create",
+    "CLEAR_SEARCH": "Clear search",
+    "TABLE": {
+      "NAME": "Name",
+      "ADDRESS": "Address",
+      "FIRSTDATE": "First open date",
+      "OPENINGHOUR": "Open hour",
+      "CLOSEHOUR": "Close hour",
+      "LASTINVERTORY": "Last inventory date time"
+    },
+    "UPSERT": {
+      "TITLE": "Create Library",
+      "EDIT_TITLE": "Edit Library",
+      "LIBRARYNAME_PLACEHOLDER": "Library Name",
+      "LOCATIONADDRESS_PLACEHOLDER": "Location address",
+      "DATE_PLACEHOLDER": "First opening date",
+      "OPENHOUR_PLACEHOLDER": "Opening Hour",
+      "CLOSEHOUR_PLACEHOLDER": "Closing Hour",
+      "LASTINVENTORYDATETIME": "Last Inventory Date time",
+      "LASTINVENTORYDATE": "Last Inventory Date",
+      "LASTINVENTORYTIME": "Last Inventory Time",
+      "BUTTONS": {
+        "CANCEL": "Cancel",
+        "SAVE": "Save"
+      }
+    },
+    "MESSAGES": {
+      "LIST": {
+        "ROLES_ERROR_LOADING": "Error loading libraries list",
+        "AUTHORITIES_ERROR_LOADING": "Error loading app authorities"
+      },
+      "CREATE": {
+        "SUCCESS": "Library created successfully!",
+        "ERROR": "Error creating library"
+      }
+    }
+  },
+  "AUTHORITIES": {
+    "KEYS": {
+      "AUTHORITY": "Authority",
+      "ROLE": "Role",
+      "ADMIN_SETTINGS": "Admin Settings",
+      "BOOK": "Book",
+      "LIBRARY": "Library",
+      "CREDENTIAL": "Credential",
+      "AUTHOR": "Author",
+      "USER": "User"
+    },
+    "VIEW_AUTHORITY": "View authorities",
+    "ADD_CREDENTIAL": "Add credential",
+    "MODIFY_CREDENTIAL": "Modify credential",
+    "DELETE_CREDENTIAL": "Delete credential",
+    "VIEW_CREDENTIAL": "View credential",
+    "ADD_USER": "Add user",
+    "MODIFY_USER": "Modify user",
+    "DELETE_USER": "Delete usere",
+    "VIEW_USER": "View user",
+    "ADD_ROLE": "Add role",
+    "MODIFY_ROLE": "Modify role",
+    "DELETE_ROLE": "Delete role",
+    "VIEW_ROLE": "View role",
+    "ADD_PROFILE": "Add profile",
+    "MODIFY_PROFILE": "Modify profile",
+    "DELETE_PROFILE": "Delete profile",
+    "VIEW_PROFILE": "View profile",
+    "MODIFY_ADMIN_SETTINGS": "Modify settings",
+    "VIEW_ADMIN_SETTINGS": "View settings",
+    "ADD_BOOK": "Add book",
+    "MODIFY_BOOK": "Modify book",
+    "DELETE_BOOK": "Delete book",
+    "VIEW_BOOK": "View book",
+    "ADD_AUTHOR": "Add author",
+    "MODIFY_AUTHOR": "Add author",
+    "DELETE_AUTHOR": "Delete author",
+    "VIEW_AUTHOR": "View author",
+    "ADD_LIBRARY": "Add library",
+    "MODIFY_LIBRARY": "Modify library",
+    "DELETE_LIBRARY": "Delete librarya",
+    "VIEW_LIBRARY": "View library",
+    "ADD_LIBRARY_FILE_RECORD": "Add library file record",
+    "DELETE_LIBRARY_FILE_RECORD": "Delete library file record",
+    "VIEW_LIBRARY_FILE_RECORD": "View library file record"
+  },
+  "DOCUMENTS": {
+    "TITLE": "Library Documents",
+    "TABLE": {
+      "NAME": "Name",
+      "TYPE": "Type",
+      "MIMETYPE": "File Type",
+      "CREATIONDATETYPE": "Created On",
+      "NO_DOCUMENT": "No document"
+    },
+    "DIALOG": {
+      "DELETE": {
+        "TITLE": "Delete document",
+        "TEXT": "Are you sure you want to delete the document named  {{ value }}",
+        "BUTTONS": {
+          "DELETE": "Delete",
+          "CANCEL": "Cancel"
+        }
+      }
+    },
+    "UPSERT": {
+      "TITLE": "Create Document",
+      "TYPE": "Type",
+      "UPLOAD_FILE": "Upload File"
+    },
+    "MESSAGES": {
+      "LIST": {
+        "ROLES_ERROR_LOADING": "Errore durante il caricamento della lista librerie",
+        "AUTHORITIES_ERROR_LOADING": "Errore durante il caricamento dei permessi"
+      },
+      "CREATE": {
+        "SUCCESS": "Document creata con successo!",
+        "ERROR": "Errore durante la creazione della document"
+      },
+      "DELETE": {
+        "SUCCESS": "Document {{ value }} deleted successfully!",
+        "ERROR": "Error deleting the document  {{ value }}"
+      },
+      "DOWNLOAD": {
+        "SUCCESS": "Document {{ value }} deleted successfully!",
+        "ERROR": "Error deleting the document  {{ value }}"
+      }
+    }
+  },
+  "ENUMS": {
+    "LIBRARY_DOCUMENT_TYPE": {
+      "LICENSE": "License",
+      "NEXT_EVENT": "Next event",
+      "OTHER": "Other"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "My Profile",
+    "ACCOUNT": {
+      "TITLE": "Account",
+      "SUBTITLE": " Manage your public profile and private information",
+      "LABEL": "Change your profile picture and information here!",
+      "PERSONALINFO": "Personal info",
+      "NAME": "Name",
+      "LASTNAME": "Last name",
+      "MESSAGES": {
+        "SUCCESS": "Profile update successful",
+        "ERROR": "Profile update failed. Please try again."
+      }
+    },
+    "SECURITY": {
+      "TITLE": "Security",
+      "SUBTITLE": " Manage your password preference",
+      "LABEL": "Change your password",
+      "PASSWORD": "Current password",
+      "NEWPASSWORD": "New password",
+      "CONFIRMPASSWORD": "Confirm password",
+      "PASSWORDS_DO_NOT_MATCH": "Passwords do not match.",
+      "MESSAGES": {
+        "SUCCESS": "Password update successful",
+        "ERROR": "Password update failed. Please try again."
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<mat-form-field style="width: 100%">
+    <mat-label>{{ label }}</mat-label>
+    <input matInput type="text" readonly [formControl]="control" (click)="f_input.click()" />
+    <input type="file" multiple hidden #f_input (change)="onFileSelected($event)" />
+</mat-form-field>

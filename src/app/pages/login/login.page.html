@@ -1,0 +1,51 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+  <mat-card class="w-full max-w-md p-6">
+    <h1 class="text-2xl font-semibold text-center mb-6">
+      Login
+    </h1>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+      <mat-form-field class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="email?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="email?.hasError('pattern')">
+          Email must be in x@x.x format
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="w-full">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="showPassword ? 'text' : 'password'" formControlName="password" />
+        <button mat-icon-button matSuffix type="button" class="mr-4" (click)="togglePasswordVisibility()"
+          [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'">
+          <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="password?.hasError('required')">
+          Password is required
+        </mat-error>
+
+        <mat-error
+          *ngIf="password?.hasError('minlength') && password?.hasError('pattern') && !password?.hasError('required')">
+          Password must be at least 8 characters and contain uppercase, number and symbol
+        </mat-error>
+
+        <mat-error
+          *ngIf="password?.hasError('minlength') && !password?.hasError('pattern') && !password?.hasError('required')">
+          Password must be at least 8 characters
+        </mat-error>
+
+        <mat-error
+          *ngIf="password?.hasError('pattern') && !password?.hasError('minlength') && !password?.hasError('required')">
+          Password must contain at least one uppercase letter, one number, and one symbol
+        </mat-error>
+      </mat-form-field>
+
+      <button type="submit" class="w-full mt-2 button-primary" mat-fab extended [disabled]="loginForm.invalid">
+        Log in
+      </button>
+    </form>
+  </mat-card>
+</div>

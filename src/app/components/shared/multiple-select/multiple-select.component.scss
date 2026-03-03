@@ -1,0 +1,20 @@
+// Stili per feedback visivo della validazione
+.field-valid {
+  .mat-mdc-form-field-outline {
+    color: #4caf50 !important; // Verde per campi validi
+  }
+  
+  .mat-mdc-form-field-outline-thick {
+    color: #4caf50 !important;
+  }
+}
+
+.field-invalid {
+  .mat-mdc-form-field-outline {
+    color: #f44336 !important; // Rosso per campi invalidi
+  }
+  
+  .mat-mdc-form-field-outline-thick {
+    color: #f44336 !important;
+  }
+}

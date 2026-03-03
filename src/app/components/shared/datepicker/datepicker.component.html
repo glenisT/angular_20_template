@@ -1,0 +1,49 @@
+<div class="datepicker-container">
+  <!-- Date picker -->
+  <mat-form-field appearance="outline" class="date-field">
+    <mat-label>{{ label }}</mat-label>
+
+    <input matInput [matDatepicker]="picker" [formControl]="dateControl" readonly />
+
+    <mat-datepicker-toggle matIconSuffix [for]="picker" />
+    <mat-datepicker #picker />
+
+    <!-- Error messages for date -->
+    @if (dateControl.touched && dateControl.hasError('required')) {
+    <mat-error>
+      {{ label }} {{ 'VALIDATION.REQUIRED' | translate }}
+    </mat-error>
+    }
+
+    @if (dateControl.touched && dateControl.hasError('matDatepickerParse')) {
+    <mat-error>
+      {{ 'VALIDATION.DATE_INVALID' | translate }}
+    </mat-error>
+    }
+  </mat-form-field>
+
+  <!-- Time picker (only if showTime is true) -->
+  @if (showTime) {
+  <mat-form-field appearance="outline" class="time-field">
+    <mat-label>{{ timeLabel }}</mat-label>
+
+    <input matInput [formControl]="timeControl" [matTimepicker]="timePicker" />
+
+    <mat-timepicker-toggle matIconSuffix [for]="timePicker" />
+    <mat-timepicker #timePicker />
+
+    <!-- Error messages for time -->
+    @if (timeControl.touched && timeControl.hasError('required')) {
+    <mat-error>
+      {{ timeLabel }} {{ 'VALIDATION.REQUIRED' | translate }}
+    </mat-error>
+    }
+
+    @if (timeControl.touched && timeControl.hasError('matTimepickerParse')) {
+    <mat-error>
+      {{ 'VALIDATION.TIME_INVALID' | translate }}
+    </mat-error>
+    }
+  </mat-form-field>
+  }
+</div>

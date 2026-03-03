@@ -1,0 +1,15 @@
+<mat-sidenav-container class="layout-container ubq-sidenav">
+  <mat-sidenav #sidenav mode="side" [(opened)]="sidenavOpened" class="layout-sidenav">
+    <app-sidebar [user]="user"></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header [user]="user" (toggleSidebar)="onToggleSidebar()"></app-header>
+
+    <main class="layout-content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <!-- <footer class="layout-footer">© {{ currentYear }} - Forward</footer> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

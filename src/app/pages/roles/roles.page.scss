@@ -1,0 +1,60 @@
+:host {
+  --account-card-bg: #00aa4f;
+  --account-card-icon: #00c06d;
+  --text-color: #ffffff;
+  --icon-bg: #c9ffce;
+  --red-chip-bg: #ffaaaa;
+  --red-chip-text: #c80000;
+  --warning-icon: #f57c00;
+  --warning-chip: #ffd7a6;
+  --warning-icon-text: #f57c00;
+  --span-color: #6a6a6a;
+}
+
+.home-container {
+  min-height: calc(100vh - 64px - 40px);
+}
+
+.welcome-container {
+  height: 130px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  padding-top: 2%;
+}
+
+mat-icon {
+  font-size: 39px;
+  height: 40px;
+  width: 39px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+p {
+  font-size: 16px;
+  line-height: normal;
+}
+
+.ubuntu-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 23px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+.filter-input {
+  width: 260px;
+}
+
+.filter-button {
+  height: 56px !important;
+  border-radius: 6px;
+}

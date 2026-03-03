@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+
+@if (data.message) {
+  <div mat-dialog-content>
+    {{ data.message }}
+  </div>
+}
+
+<mat-dialog-actions align="end">
+  <button type="button" class="button-secondary" mat-fab extended (click)="cancel()">
+    {{ data.cancelText ?? 'Cancel' }}
+  </button>
+
+  <button type="button" class="button-primary" mat-fab extended (click)="confirm()">
+    {{ data.confirmText ?? 'Confirm' }}
+  </button>
+</mat-dialog-actions>
