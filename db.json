@@ -45,6 +45,17 @@
       "role": [
         "user"
       ]
+    },
+    {
+      "id": "8ca9ce04-08c1-4871-a365-bbe64ed95d66",
+      "name": "Giga",
+      "surname": "Byte",
+      "username": "gigabyte",
+      "email": "giga@byte.com",
+      "password": "Temporary@2",
+      "role": [
+        "user"
+      ]
     }
   ],
   "roles": [

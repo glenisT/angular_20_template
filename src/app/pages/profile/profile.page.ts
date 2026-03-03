@@ -132,7 +132,7 @@ export class ProfilePage implements OnInit, OnDestroy {
     };
 
     const sub = this.usersService.updateUser(payload).subscribe({
-      next: () => this.router.navigate(['/users']),
+      next: () => this.location.back(),
       error: err => console.error('Update failed', err),
     });
 
