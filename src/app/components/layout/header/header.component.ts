@@ -9,6 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslationService } from '../../../services/translation.service';
 import { UserModel } from '../../../models/users.model';
+import { ConfirmDialogComponent } from '../../shared/confirmation-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-header',
@@ -60,7 +61,22 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    sessionStorage.clear();
-    this.router.navigate(['/login']);
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '420px',
+      data: {
+        title: 'Log out',
+        message:
+          'Are you sure you want log out?',
+        confirmText: 'Confirm',
+        cancelText: 'Cancel',
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(confirmed => {
+      if (!confirmed) return;
+
+      sessionStorage.clear();
+      this.router.navigate(['/login']);
+    });
   }
 }
