@@ -6,10 +6,10 @@
   <mat-sidenav-content>
     <app-header [user]="user" (toggleSidebar)="onToggleSidebar()"></app-header>
 
-    <main class="layout-content">
+    <main>
       <router-outlet></router-outlet>
     </main>
 
-    <!-- <footer class="layout-footer">© {{ currentYear }} - Forward</footer> -->
+    <footer class="layout-footer">© {{ currentYear }} - Forward</footer>
   </mat-sidenav-content>
 </mat-sidenav-container>

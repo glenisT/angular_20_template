@@ -1,17 +1,17 @@
-import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators, ReactiveFormsModule, AbstractControl, ValidationErrors } from '@angular/forms';
+import { Component, inject, OnDestroy } from '@angular/core';
+import { FormBuilder, Validators, ReactiveFormsModule, AbstractControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { HttpClient } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent } from '../../components/shared/confirmation-dialog/confirm-dialog.component';
 import { UserModel } from '../../models/users.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-change-password',
@@ -29,14 +29,13 @@ import { UserModel } from '../../models/users.model';
   templateUrl: './change-password.page.html',
   styleUrls: ['./change-password.page.scss'],
 })
-export class ChangePasswordPage {
+export class ChangePasswordPage implements OnDestroy {
   private fb = inject(FormBuilder);
-  private http = inject(HttpClient);
   private router = inject(Router);
   private usersService = inject(UsersService);
   private dialog = inject(MatDialog);
 
-
+  subscription = new Subscription;
   showPassword: boolean = false;
 
   loginForm = this.fb.group(
@@ -76,9 +75,13 @@ export class ChangePasswordPage {
     return this.loginForm.controls['confirmPassword'];
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   onSubmit() {
     const { email, password, confirmPassword } = this.loginForm.value;
-    this.usersService.getUserByEmail(email as string).subscribe({
+    const subEmail = this.usersService.getUserByEmail(email as string).subscribe({
       next: (response: any) => {
         if (response.length) {
           const payload: UserModel = {
@@ -90,7 +93,7 @@ export class ChangePasswordPage {
             email: response[0].email,
             role: response[0].role,
           };
-          this.usersService.updateUser(payload).subscribe({
+          const subUpdate = this.usersService.updateUser(payload).subscribe({
             next: (response: any) => {
               const dialogRef = this.dialog.open(ConfirmDialogComponent, {
                 width: '420px',
@@ -112,6 +115,7 @@ export class ChangePasswordPage {
             },
             error: (error) => { }
           });
+          this.subscription.add(subUpdate);
         } else {
           alert('Email invalid!');
         }
@@ -119,7 +123,8 @@ export class ChangePasswordPage {
       error: (error) => {
         alert('Unknown error!');
       }
-    })
+    });
+    this.subscription.add(subEmail);
   }
 
   togglePasswordVisibility() {

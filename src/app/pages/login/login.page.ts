@@ -1,14 +1,14 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnDestroy } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { HttpClient } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 import { MatIconModule } from '@angular/material/icon';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -26,11 +26,12 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage {
+export class LoginPage implements OnDestroy{
   private fb = inject(FormBuilder);
-  private http = inject(HttpClient);
   private router = inject(Router);
   private usersService = inject(UsersService);
+
+  subscription = new Subscription;
 
   showPassword: boolean = false;
 
@@ -54,9 +55,13 @@ export class LoginPage {
     return this.loginForm.controls['password'];
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   onSubmit() {
     const { email, password } = this.loginForm.value;
-    this.usersService.getUserByEmail(email as string).subscribe({
+    const sub = this.usersService.getUserByEmail(email as string).subscribe({
       next: (response: any) => {
         if (response.length) {
           if (response[0].password === password) {            
@@ -73,7 +78,8 @@ export class LoginPage {
       error: (error) => {
         alert('Login invalid');
       }
-    })
+    });
+    this.subscription.add(sub);
   }
 
   togglePasswordVisibility() {

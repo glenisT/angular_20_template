@@ -10,7 +10,6 @@ import { Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { AuthService } from '../../auth/auth.service';
-import { AuthUser } from '../../models/auth-user.model';
 
 import { TranslateModule } from '@ngx-translate/core';
 import { MatIconModule } from '@angular/material/icon';
@@ -136,7 +135,7 @@ export class RolesPage implements OnInit, OnDestroy {
   // Sorting
   // ===============================
   onSortChange(sort: Sort) {
-    this.pageIndex = 0; // reset page on sort
+    this.pageIndex = 0;
     this.loadRoles();
   }
 

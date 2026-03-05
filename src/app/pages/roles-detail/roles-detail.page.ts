@@ -52,7 +52,6 @@ export class RolesDetailPage implements OnInit, OnDestroy {
   role?: RoleModel;
   isEdit = false;
 
-  // 🔒 Character limit
   readonly maxDescriptionLength = 100;
 
   constructor(private fb: FormBuilder, public translationService: TranslationService) { }
@@ -61,11 +60,8 @@ export class RolesDetailPage implements OnInit, OnDestroy {
     const selectedLang = localStorage.getItem('selectedLanguage') || 'en';
     this.translationService.loadTranslations(selectedLang);
 
-    // detect future language changes
-    this.translationService.currentLanguage$.subscribe(lang => {
-      // reload translations if needed
-    });
-    
+    this.translationService.currentLanguage$.subscribe(lang => { });
+
     this.form = this.fb.group({
       name: ['', Validators.required],
       description: [

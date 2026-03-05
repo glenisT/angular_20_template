@@ -12,7 +12,6 @@ import { Subscription } from 'rxjs';
 import { AuthService } from '../../auth/auth.service';
 import { UsersService } from '../../services/users.service';
 import { UserModel } from '../../models/users.model';
-import { AuthUser } from '../../models/auth-user.model';
 
 import { TranslateModule } from '@ngx-translate/core';
 import { MatIconModule } from '@angular/material/icon';
@@ -46,7 +45,6 @@ import { TranslationService } from '../../services/translation.service';
   styleUrls: ['./users.page.scss'],
 })
 export class UsersPage implements OnInit, OnDestroy {
-  private authService = inject(AuthService);
   private usersService = inject(UsersService);
   private router = inject(Router);
   private dialog = inject(MatDialog);

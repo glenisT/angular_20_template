@@ -10,7 +10,7 @@ import { LoadingService } from './services/loading.service';
   styleUrl: './app.scss'
 })
 export class App {
-  title = 'forwar-base';
+  title = 'angular-base';
   isLoading$: Observable<boolean>;
 
   constructor(private loadingService: LoadingService) {

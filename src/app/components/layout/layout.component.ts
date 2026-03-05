@@ -14,7 +14,6 @@ import { UsersService } from '../../services/users.service';
     CommonModule,
     RouterOutlet,
     MatSidenavModule,
-    // TranslateModule,
     SidebarComponent,
     HeaderComponent,
   ],
