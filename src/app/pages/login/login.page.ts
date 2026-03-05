@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -20,7 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    RouterModule
   ],
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
@@ -57,12 +58,16 @@ export class LoginPage {
     const { email, password } = this.loginForm.value;
     this.usersService.getUserByEmail(email as string).subscribe({
       next: (response: any) => {
-        if (response.length && response[0].password === password) {
-          sessionStorage.setItem('email', email as string);
-          sessionStorage.setItem('admin', response[0].role.includes('admin') ? 'true' : 'false');
-          this.router.navigate(['/home']);
+        if (response.length) {
+          if (response[0].password === password) {            
+            sessionStorage.setItem('email', email as string);
+            sessionStorage.setItem('admin', response[0].role.includes('admin') ? 'true' : 'false');
+            this.router.navigate(['/home']);
+          } else {
+            alert('Password invalid')
+          }
         } else {
-          alert('Login invalid');
+          alert('Email invalid');
         }
       },
       error: (error) => {

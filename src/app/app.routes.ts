@@ -10,6 +10,11 @@ export const routes: Routes = [
       import('./pages/login/login.page').then(m => m.LoginPage),
   },
   {
+    path: 'changePassword',
+    loadComponent: () =>
+      import('./pages/change-password/change-password.page').then(m => m.ChangePasswordPage),
+  },
+  {
     path: '',
     component: LayoutComponent,
     children: [
